@@ -1,0 +1,2 @@
+"use strict";sap.ui.define(["sap/m/MessageBox","./BaseController"],function(e,o){"use strict";function n(e){return e&&e.__esModule&&typeof e.default!=="undefined"?e.default:e}const t=n(o);const l=t.extend("xcop.hello.controller.Main",{sayHello:function o(){e.show("Olá pra todos!!!")}});return l});
+//# sourceMappingURL=Main.controller.js.map
