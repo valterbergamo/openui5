@@ -1,21 +1,10 @@
-"use strict";
+sap.ui.define(["./BaseController"], function (BaseController) {
+	"use strict";
 
-sap.ui.define(["./BaseController"], function (__BaseController) {
-  "use strict";
-
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule && typeof obj.default !== "undefined" ? obj.default : obj;
-  }
-  const BaseController = _interopRequireDefault(__BaseController);
-  /**
-   * @namespace xcop.hello.controller
-   */
-  const App = BaseController.extend("xcop.hello.controller.App", {
-    onInit: function _onInit() {
-      // apply content density mode to root view
-      this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
-    }
-  });
-  return App;
+	return BaseController.extend("pib.cafelandia.app.controller.App", {
+		onInit: function () {
+			// apply content density mode to root view
+			this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+		}
+	});
 });
-//# sourceMappingURL=App-dbg.controller.js.map

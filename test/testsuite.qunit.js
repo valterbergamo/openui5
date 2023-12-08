@@ -1,2 +1,2 @@
-"use strict";window.suite=function(){const t=new parent.jsUnitTestSuite;const n=location.pathname.match(/(.*\/)(?:[^/]+)/)?.[1];t.addTestPage(n+"unit/unitTests.qunit.html");t.addTestPage(n+"integration/opaTests.qunit.html");return t};
+window.suite=function(){var t=new parent.jsUnitTestSuite;var n=location.pathname.match(/(.*\/)(?:[^/]+)/);var a=n&&n[1];t.addTestPage(a+"unit/unitTests.qunit.html");t.addTestPage(a+"integration/opaTests.qunit.html");return t};
 //# sourceMappingURL=testsuite.qunit.js.map

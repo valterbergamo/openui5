@@ -1,2 +1,2 @@
-"use strict";sap.ui.define([],function(){"use strict";var e={formatValue:e=>e?.toUpperCase()};return e});
+sap.ui.define(function(){"use strict";return{formatValue:function(e){return e&&e.toUpperCase()}}});
 //# sourceMappingURL=formatter.js.map

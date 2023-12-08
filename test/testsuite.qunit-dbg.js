@@ -1,12 +1,9 @@
-"use strict";
-
 /* eslint-disable */
-// @ts-nocheck
 window.suite = function () {
-  const suite = new parent.jsUnitTestSuite();
-  const sContextPath = location.pathname.match(/(.*\/)(?:[^/]+)/)?.[1];
-  suite.addTestPage(sContextPath + "unit/unitTests.qunit.html");
-  suite.addTestPage(sContextPath + "integration/opaTests.qunit.html");
-  return suite;
+	var suite = new parent.jsUnitTestSuite();
+	var aParts = location.pathname.match(/(.*\/)(?:[^/]+)/);
+	var sContextPath = aParts && aParts[1];
+	suite.addTestPage(sContextPath + "unit/unitTests.qunit.html");
+	suite.addTestPage(sContextPath + "integration/opaTests.qunit.html");
+	return suite;
 };
-//# sourceMappingURL=testsuite.qunit-dbg.js.map

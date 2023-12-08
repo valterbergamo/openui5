@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="xcop.hello.controller.App"
+	controllerName="pib.cafelandia.app.controller.App"
 	displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc">

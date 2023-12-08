@@ -1,13 +1,9 @@
-"use strict";
+sap.ui.define(function () {
+	"use strict";
 
-sap.ui.define([], function () {
-  "use strict";
-
-  var __exports = {
-    formatValue: value => {
-      return value?.toUpperCase();
-    }
-  };
-  return __exports;
+	return {
+		formatValue: function (value) {
+			return value && value.toUpperCase();
+		}
+	};
 });
-//# sourceMappingURL=formatter-dbg.js.map

@@ -1,54 +1,48 @@
-"use strict";
+sap.ui.define(["sap/ui/test/opaQunit", "./pages/Main"], function () {
+	"use strict";
 
-sap.ui.define(["sap/ui/test/opaQunit", "./pages/MainPage"], function (opaTest, __MainPage) {
-  "use strict";
+	QUnit.module("Sample Hello Journey");
 
-  function _interopRequireDefault(obj) {
-    return obj && obj.__esModule && typeof obj.default !== "undefined" ? obj.default : obj;
-  }
-  const MainPage = _interopRequireDefault(__MainPage);
-  const onTheMainPage = new MainPage();
-  QUnit.module("Sample Hello Journey");
-  opaTest("Should open the Hello dialog", function () {
-    // Arrangements
-    onTheMainPage.iStartMyUIComponent({
-      componentConfig: {
-        name: "xcop.hello"
-      }
-    });
+	opaTest("Should open the Hello dialog", function (Given, When, Then) {
+		// Arrangements
+		Given.iStartMyUIComponent({
+			componentConfig: {
+				name: "pib.cafelandia.app"
+			}
+		});
 
-    // Actions
-    onTheMainPage.iPressTheSayHelloWithDialogButton();
+		// Actions
+		When.onTheMainPage.iPressTheSayHelloButton();
 
-    // Assertions
-    onTheMainPage.iShouldSeeTheHelloDialog();
+		// Assertions
+		Then.onTheMainPage.iShouldSeeTheHelloDialog();
 
-    // Actions
-    onTheMainPage.iPressTheOkButtonInTheDialog();
+		// Actions
+		When.onTheMainPage.iPressTheOkButtonInTheDialog();
 
-    // Assertions
-    onTheMainPage.iShouldNotSeeTheHelloDialog();
+		// Assertions
+		Then.onTheMainPage.iShouldNotSeeTheHelloDialog();
 
-    // Cleanup
-    onTheMainPage.iTeardownMyApp();
-  });
-  opaTest("Should close the Hello dialog", function () {
-    // Arrangements
-    onTheMainPage.iStartMyUIComponent({
-      componentConfig: {
-        name: "xcop.hello"
-      }
-    });
+		// Cleanup
+		Then.iTeardownMyApp();
+	});
 
-    // Actions
-    onTheMainPage.iPressTheSayHelloWithDialogButton();
-    onTheMainPage.iPressTheOkButtonInTheDialog();
+	opaTest("Should close the Hello dialog", function (Given, When, Then) {
+		// Arrangements
+		Given.iStartMyUIComponent({
+			componentConfig: {
+				name: "pib.cafelandia.app"
+			}
+		});
 
-    // Assertions
-    onTheMainPage.iShouldNotSeeTheHelloDialog();
+		// Actions
+		When.onTheMainPage.iPressTheSayHelloButton();
+		When.onTheMainPage.iPressTheOkButtonInTheDialog();
 
-    // Cleanup
-    onTheMainPage.iTeardownMyApp();
-  });
+		// Assertions
+		Then.onTheMainPage.iShouldNotSeeTheHelloDialog();
+
+		// Cleanup
+		Then.iTeardownMyApp();
+	});
 });
-//# sourceMappingURL=HelloJourney-dbg.js.map

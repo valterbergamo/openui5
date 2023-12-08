@@ -1,2 +1,2 @@
-"use strict";sap.ui.define(["sap/m/MessageBox","./BaseController"],function(e,o){"use strict";function n(e){return e&&e.__esModule&&typeof e.default!=="undefined"?e.default:e}const t=n(o);const l=t.extend("xcop.hello.controller.Main",{sayHello:function o(){e.show("Olá pra todos!!!")}});return l});
+sap.ui.define(["./BaseController","sap/m/MessageBox"],function(e,n){"use strict";return e.extend("pib.cafelandia.app.controller.Main",{sayHello:function(){n.show("Hello World!")}})});
 //# sourceMappingURL=Main.controller.js.map

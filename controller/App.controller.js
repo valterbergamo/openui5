@@ -1,2 +1,2 @@
-"use strict";sap.ui.define(["./BaseController"],function(e){"use strict";function t(e){return e&&e.__esModule&&typeof e.default!=="undefined"?e.default:e}const n=t(e);const o=n.extend("xcop.hello.controller.App",{onInit:function e(){this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass())}});return o});
+sap.ui.define(["./BaseController"],function(e){"use strict";return e.extend("pib.cafelandia.app.controller.App",{onInit:function(){this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass())}})});
 //# sourceMappingURL=App.controller.js.map

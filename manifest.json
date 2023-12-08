@@ -2,7 +2,7 @@
 	"_version": "1.12.0",
 
 	"sap.app": {
-		"id": "xcop.hello",
+		"id": "pib.cafelandia.app",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"title": "{{appTitle}}",
@@ -24,7 +24,7 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "xcop.hello.view.App",
+			"viewName": "pib.cafelandia.app.view.App",
 			"type": "XML",
 			"async": true,
 			"id": "app"
@@ -49,7 +49,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "xcop.hello.i18n.i18n"
+					"bundleName": "pib.cafelandia.app.i18n.i18n"
 				}
 			}
 		},
@@ -58,7 +58,7 @@
 			"config": {
 				"routerClass": "sap.m.routing.Router",
 				"viewType": "XML",
-				"viewPath": "xcop.hello.view",
+				"viewPath": "pib.cafelandia.app.view",
 				"controlId": "app",
 				"controlAggregation": "pages",
 				"async": true
